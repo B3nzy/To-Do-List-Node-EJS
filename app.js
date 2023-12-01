@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 mongoose.connect(
-  "mongodb+srv://Sumit-Admin:t4PpoWDDqiZQQPd4@cluster0.ubbrnwl.mongodb.net/todolistDB"
+  `process.env.MONOGODO_URL`
 );
 
 const itemSchema = new mongoose.Schema({
